@@ -1,8 +1,8 @@
 body{
-  color: #5f3436;
   font-family: "Times New Roman", Times, serif;
   font-size: 17px;
   line-height: 27px;
+  color: #5f3436;
 }
 
 /* header */
@@ -15,17 +15,17 @@ body > header{
 }
 header h1{
   font-family: 'Oswald', sans-serif;
-  line-height: 45px;
   font-size: 28px;
+  line-height: 45px;
+  color: #ffffff;
   font-weight: normal;
   text-transform: uppercase;
   text-align: center;
-  color: #ffffff;
 }
 header h1 span{
   font-family: 'Pacifico', 'cursive';
-  line-height: 30px;
   font-size: 22px;
+  line-height: 30px;
   text-transform: none;
 }
 /* * header */
@@ -45,15 +45,15 @@ main > header > img{
 }
 h2{
   font-family: 'Oswald', sans-serif;
-  line-height: 32px;
   font-size: 22px;
+  line-height: 32px;
+  color: #502628;
   font-weight: normal;
   text-transform: uppercase;
-  color: #502628;
 }
 main > header > p{
-  line-height: 25px;
   font-size: 15px;
+  line-height: 25px;
   font-style: italic;
 }
 /* * main -> header */
@@ -74,10 +74,10 @@ main > section h3{
   font-family: 'Pacifico', 'cursive';
   font-size: 25px;
   line-height: 49px;
+  color: #de6e1d;
   font-weight: normal;
   text-transform: none;
   text-align: center;
-  color: #de6e1d;
 }
 .partners{
   width: 100%;
@@ -124,17 +124,17 @@ main > section h3{
   font-family: 'Pacifico', 'cursive';
   font-size: 25px;
   line-height: 49px;
+  color: #ffffff;
   font-weight: normal;
   text-transform: none;
-  color: #ffffff;
 }
 .news a{
   font-family: 'Oswald', sans-serif;
-  line-height: 28px;
   font-size: 18px;
+  line-height: 28px;
+  color: #502628;
   text-decoration: none;
   text-transform: uppercase;
-  color: #502628;
 }
 .news p{
   font-family: "Times New Roman", Times, serif;
@@ -167,10 +167,13 @@ body > footer a{
   text-decoration: none;
   font-style: italic;
 }
+body > footer a:hover{
+  text-decoration: underline;
+}
 body > footer section + section{
   border-top: 2px dotted #ffffff;
 }
-.footer-form input[type="email"] {
+.footer-form input[type="email"]{
   width: 152px;
   height: 48px;
   border: 2px solid white;
@@ -183,7 +186,7 @@ body > footer section + section{
   color: #ffffff;
   background: none;
 }
-.footer-form input[type="submit"] {
+.footer-form input[type="submit"]{
   width: 48px;
   height: 48px;
   border: 0;
@@ -195,6 +198,9 @@ body > footer section + section{
   background: none;
   cursor: pointer;
   vertical-align: middle;
+}
+.footer-form input[type="submit"]:hover{
+  opacity: .8;
 }
 /* * footer */
 /* aside.map */
@@ -221,8 +227,71 @@ body > footer section + section{
   display: inline-block;
   width: 22px;
   height: 32px;
-  background: url('../img/new-map-pointer.png') no-repeat;
+  background: url('../img/new-map-pointer.png') no-repeat #502628;
   vertical-align: top;
   margin-right: 10px;
 }
+.map a:hover{
+  color: #DC5F13;
+}
 /* * aside.map */
+
+
+/* @media screen 768px */
+@media screen and (min-width: 768px){
+  body > header {
+    height: 400px;
+  }
+  header h1{
+    font-size: 54px;
+    line-height: 82px;
+  }
+  header h1 span{
+    font-size: 35px;
+    line-height: 49px;
+  }
+  /* * header */
+  /* main */
+  main{
+    padding: 0 100px;
+  }
+  /* main -> header */
+  main > header{
+    padding: 0 20px 20px;
+  }
+  main > header > img{
+    width: 370px;
+    margin-bottom: 20px;
+  }
+  h2{
+    font-size: 32px;
+    line-height: 48px;
+  }
+  /* * main -> header */
+  /* main -> section */
+  main > section h3{
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 10px;
+  }
+  .partners li{
+    width: auto;
+    margin: 10px;
+  }
+  /* * main -> section */
+  /* aside.news */
+  .news h4{
+    font-size: 32px;
+    line-height: 48px;
+  }
+  /* * aside.news */
+  /* footer */
+  
+  /* * footer */
+  /* aside.map */
+  .map{
+    background:url('../img/new-map-2x-768x178.jpg') center/cover #502628;
+  }
+  /* * aside.map */
+}
+/* * @media screen 768px */
