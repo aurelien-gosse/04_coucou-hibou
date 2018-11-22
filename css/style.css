@@ -3,6 +3,7 @@ body{
   font-size: 17px;
   line-height: 27px;
   color: #5f3436;
+  position: relative;
 }
 
 /* logo */
@@ -69,10 +70,10 @@ body{
   transition: 0.3s all ease-in-out;
 }
 .burger span:nth-of-type(1){
-  top: calc(50% - 6px);
+  top: calc(50% - 8px);
 }
 .burger span:nth-of-type(3){
-  top: calc(50% + 6px);
+  top: calc(50% + 8px);
 }
 .burger:hover span{
   opacity: .8;
@@ -266,16 +267,16 @@ body{
 }
 /* * aside.news */
 /* footer */
-body > footer{
+.footer{
   padding: 20px;
   background: #502628;
   text-align: center;
   color: white;
 }
-body > footer section{
+.footer section{
   padding: 20px 0 50px;
 }
-body > footer h5{
+.footer h5{
   font-family: 'Oswald', sans-serif;
   font-size: 17px;
   line-height: 20px;
@@ -301,8 +302,8 @@ body > footer h5{
 .footer-connect a:hover{
   opacity: .8;
 }
-body > footer section + section{
-  border-top: 2px dotted #ffffff;
+.footer-contact, .footer-connect{
+  border-bottom: 2px dotted #ffffff;
 }
 .footer-form input[type="email"]{
   width: 152px;
@@ -370,37 +371,79 @@ body > footer section + section{
 
 /* @media screen 768px */
 @media screen and (min-width: 768px){
-  body > header {
+  /* logo */
+  .logo{
+    height: 95px;
+  }
+  .logo img{
+    width: 118px;
+    height: 71px;
+  }
+  /* * logo */
+  /* header */
+  .header {
     height: 400px;
   }
-  header h1{
+  .header h1{
     font-size: 54px;
     line-height: 82px;
   }
-  header h1 span{
+  .header span{
     font-size: 35px;
     line-height: 49px;
   }
   /* * header */
+  /* menu */
+  .burger{
+    top: 35px;
+    right: 35px;
+  }
+  .menu li:nth-of-type(3){
+    height: 95px;
+  }
+  .menu li:nth-of-type(3) img{
+    width: 118px;
+    height: 71px;
+    margin-top: 8px;
+  }
+  .menu.active{
+    height: 365px;
+  }
+  .nav-connect{
+    display: flex;
+    position: absolute;
+    top: 120px;
+    right: 20px;
+  }
+  .nav-connect a{
+    font-size: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 5px;
+  }
+  .nav-connect a:hover{
+    opacity: .8;
+  }
+  /* * menu */
   /* main */
-  main{
+  .main-homepage{
     padding: 0 100px;
   }
   /* main -> header */
-  main > header{
+  .main-header{
     padding: 0 20px 20px;
   }
-  main > header > img{
+  .main-header img{
     width: 370px;
     margin-bottom: 20px;
   }
-  h2{
+  .main-header h2{
     font-size: 32px;
     line-height: 48px;
   }
   /* * main -> header */
   /* main -> section */
-  main > section h3{
+  .main-section h3{
     font-size: 40px;
     line-height: 46px;
     margin-bottom: 10px;
@@ -417,7 +460,50 @@ body > footer section + section{
   }
   /* * aside.news */
   /* footer */
-  
+
+
+  .footer{
+    padding: 20px 100px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer-contact, .footer-connect{
+    width: 50%;
+    border: none;
+  }
+  .footer-form{
+    width: 100%;
+    border-top: 2px dotted #ffffff;
+  }
+  .footer-contact{
+    position: relative;
+  }
+  .footer-contact::after{
+    content: "";
+    border-left: 2px dotted #ffffff;
+    position: absolute;
+    display: block;
+    height: 110px;
+    top: 35px;
+    right: 0px;
+  }
+  section.footer-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 20px;
+  }
+  .footer-form h5{
+    margin-right: 20px;
+  }
+  .footer-form input[type="email"]{
+    width: 240px;
+  }
+
+
+
+
+
   /* * footer */
   /* aside.map */
   .map{
