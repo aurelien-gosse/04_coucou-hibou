@@ -44,6 +44,9 @@ body{
   line-height: 30px;
   text-transform: none;
 }
+.header a{
+  display: none;
+}
 /* * header */
 /* menu */
 .nav-connect{
@@ -359,7 +362,7 @@ body{
   display: inline-block;
   width: 22px;
   height: 32px;
-  background: url('../img/new-map-pointer.png') no-repeat #502628;
+  background: url('../img/new-map-pointer.png') no-repeat;
   vertical-align: top;
   margin-right: 10px;
 }
@@ -460,8 +463,6 @@ body{
   }
   /* * aside.news */
   /* footer */
-
-
   .footer{
     padding: 20px 100px;
     display: flex;
@@ -499,11 +500,6 @@ body{
   .footer-form input[type="email"]{
     width: 240px;
   }
-
-
-
-
-
   /* * footer */
   /* aside.map */
   .map{
@@ -512,3 +508,230 @@ body{
   /* * aside.map */
 }
 /* * @media screen 768px */
+/* @media screen 1024px */
+@media screen and (min-width: 1024px){
+  /* logo */
+  .logo{
+    display: none;
+  }
+  /* * logo */
+  /* header */
+  .header {
+    height: 100vh;
+    background: none;
+  }
+  .header video{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    transform: translate(-50%,-50%);
+  }
+  .header h1{
+    font-size: 86px;
+    line-height: 126px;
+    margin: 0 0 20px;
+  }
+  .header a{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+  }
+  .header a::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #ffffff transparent transparent transparent;
+    position: absolute;
+    left: 15px;
+    top: 17px;
+  }
+  /* * header */
+  /* menu */
+  .burger{
+    display: none;
+  }
+  .menu{
+    height: 170px;
+    border-bottom: 2px dotted #4B2427;
+    background: #ffffffcc;
+  }
+  .menu li:nth-of-type(3){
+    order: 0;
+    height: auto;
+    background: none;
+  }
+  .menu li:nth-of-type(3) img{
+    width: 132px;
+    height: 140px;
+    margin: 0;
+  }
+  .menu li + li{
+    border-top: none;
+    position: relative;
+  }
+  .menu li + li::before{
+    content: "";
+    display: block;
+    border-left: 2px dotted #4B2427;
+    height: 16px;
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 0;
+  }
+  .menu ul{
+    height: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu li{
+    padding: 0 40px;
+  }
+  .menu a{
+    color: #502628;
+    padding: 0;
+  }
+  .menu a:hover{
+    color: #dc5f13;
+  }
+  .nav-connect{
+    top: 40px;
+  }
+  /* * menu */
+  /* main */
+  .main-homepage{
+    padding: 0 20px;
+    background: #ffffff;
+  }
+  /* main -> header */
+  .main-header{
+    padding: 0 0 40px;
+  }
+  .main-header img{
+    width: 370px;
+    margin-bottom: 20px;
+  }
+  .main-header h2{
+    font-size: 57px;
+    line-height: 85px;
+    margin: 20px 0;
+  }
+  /* * main -> header */
+  /* main -> section */
+  .main-section{
+    text-align: left;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 50px 0;
+  }
+  .main-section h3{
+    margin-top: 30px;
+  }
+  .main-section .txt, .main-section .video{
+    width: 48%;
+  }
+  .gastronomique .video, .produits .video{
+    order: 1;
+  }
+  .commerce{
+    margin-bottom: 0;
+  }
+  .partners ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .partners li{
+    margin: 0;
+  }
+  /* * main -> section */
+  /* aside.news */
+  .news{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 100px 20px;
+  }
+  .new, .shop{
+    width: 40%;
+  }
+  .boite{
+    display: initial;
+    width: 20%;
+  }
+  .news h4{
+    font-size: 44px;
+    line-height: 52px;
+    margin-top: 0;
+  }
+  /* * aside.news */
+  /* footer */
+  .footer{
+    padding: 20px 20px 0;
+  }
+  .footer section{
+    width: calc(100%/3);
+  }
+  .footer-form{
+    border-top: none;
+  }
+  .footer-connect{
+    position: relative;
+  }
+  .footer-connect::after{
+    content: "";
+    border-left: 2px dotted #ffffff;
+    position: absolute;
+    display: block;
+    height: 110px;
+    top: 35px;
+    right: 0px;
+  }
+
+
+
+
+
+
+
+
+  section.footer-form{
+    display: initial;
+    padding: 20px 0 50px;
+  }
+  .footer-form h5{
+    margin-right: 0;
+  }
+  .footer-form input[type="email"]{
+    width: 150px;
+    margin-left: 15px;
+  }
+
+
+
+
+
+
+
+
+
+
+  /* * footer */
+  /* aside.map */
+  .map{
+    background:url('../img/new-map-2x-1356x328.jpg') center/cover #502628;
+  }
+  /* * aside.map */
+} 
+/* * @media screen 1024px */
